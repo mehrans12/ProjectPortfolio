@@ -4,79 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehran Ahmed | Full-Stack Developer</title>
+    <title>Mehran Ahmed | Full-Stack Developer & Designer</title>
+    <meta name="description" content="Mehran Ahmed — Full-Stack Web Developer specializing in Frontend, Shopify, WordPress, and custom web applications. Let's build something amazing together.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">Mehran<span class="dot">.</span></div>
+            <a href="#home" class="logo">
+                <span class="logo-text">M</span>
+                <span class="logo-dot">.</span>
+            </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Let's Talk</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-glow"></div>
         <div class="hero-content">
-            <p class="hello-text">Hello, I'm</p>
-            <h1 class="my-name">Mehran Ahmed</h1>
-            <h2 class="my-title">Web Developer</h2>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for freelance
+            </div>
+            <h1 class="hero-greeting">Hi, I'm <span class="hero-name" id="heroName">Mehran Ahmed</span></h1>
+            <h2 class="hero-title">
+                <span class="title-static">I build </span>
+                <span class="title-dynamic" id="dynamicTitle">beautiful websites</span>
+                <span class="title-cursor">|</span>
+            </h2>
             <p class="hero-description">
-                I build websites that look good and work great.
-                Frontend, Full-Stack, Shopify & WordPress — I do it all!
+                Full-Stack Developer crafting modern, high-performance web experiences.
+                From sleek frontends to robust backends — I turn ideas into reality.
             </p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">My Projects</a>
-                <a href="#contact" class="btn secondary-btn">Hire Me</a>
+                <a href="#projects" class="btn btn-primary" id="btnProjects">
+                    <span>View My Work</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="btnContact">
+                    <span>Hire Me</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
             </div>
-            <div class="social-icons">
-                <a href="https://github.com/mehrans12" target="_blank" class="social-link github">GitHub</a>
-                <a href="https://www.linkedin.com/in/mehrans12/" target="_blank"
-                    class="social-link linkedin">LinkedIn</a>
+            <div class="hero-socials">
+                <a href="https://github.com/mehrans12" target="_blank" rel="noopener noreferrer" class="social-chip" id="socialGithub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/mehrans12/" target="_blank" rel="noopener noreferrer" class="social-chip" id="socialLinkedin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
             </div>
+        </div>
+        <div class="hero-scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="section-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="underline"></div>
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about code, driven by results</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hey there! I'm a passionate web developer who loves turning ideas into real websites.</p>
-                    <p>I don't just write code — I build solutions. Whether it's a custom web app, a Shopify store, or a
-                        WordPress site, I focus on making things that look great and actually work.</p>
-                    <p>I believe in clean code, fast websites, and happy clients. Let's build something cool together!
-                    </p>
+                    <p class="about-lead">I'm a web developer who turns complex problems into elegant digital solutions.</p>
+                    <p>I don't just write code — I build experiences. Whether it's a custom web app, a Shopify store, or a
+                        WordPress site, I focus on creating things that not only look stunning but perform flawlessly.</p>
+                    <p>My approach combines clean architecture with pixel-perfect design, ensuring every project delivers real
+                        value. I believe great development is invisible — users should just feel the magic.</p>
                 </div>
-                <div class="about-info-boxes">
-                    <div class="info-box">
-                        <div class="info-number">4+</div>
-                        <div class="info-label">Projects Done</div>
+                <div class="about-stats">
+                    <div class="stat-card" id="statProjects">
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">Projects<br>Delivered</div>
+                        <div class="stat-glow"></div>
                     </div>
-                    <div class="info-box">
-                        <div class="info-number">5</div>
-                        <div class="info-label">Services</div>
+                    <div class="stat-card" id="statServices">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Core<br>Services</div>
+                        <div class="stat-glow"></div>
                     </div>
-                    <div class="info-box">
-                        <div class="info-number">100%</div>
-                        <div class="info-label">Effort</div>
+                    <div class="stat-card" id="statEffort">
+                        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                        <div class="stat-label">Dedication<br>& Effort</div>
+                        <div class="stat-glow"></div>
                     </div>
                 </div>
             </div>
@@ -86,34 +123,51 @@
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="section-container">
-            <h2 class="section-title">My Services</h2>
-            <div class="underline"></div>
+            <div class="section-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">My Services</h2>
+                <p class="section-subtitle">End-to-end solutions for your digital needs</p>
+            </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-emoji">💻</div>
+                <div class="service-card" id="serviceFrontend">
+                    <div class="service-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
                     <h3>Frontend Development</h3>
-                    <p>I create responsive and interactive websites using HTML, CSS and JavaScript. Pixel-perfect every
-                        time!</p>
+                    <p>Responsive, interactive interfaces with pixel-perfect precision using HTML, CSS, and modern JavaScript.</p>
+                    <div class="service-tools">HTML · CSS · JS · React</div>
                 </div>
-                <div class="service-card">
-                    <div class="service-emoji">⚙️</div>
+                <div class="service-card" id="serviceFullstack">
+                    <div class="service-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
                     <h3>Full-Stack Development</h3>
-                    <p>End-to-end web apps with secure backends and dynamic frontends. The whole package!</p>
+                    <p>Complete web applications with secure backends and dynamic frontends. The whole package, done right.</p>
+                    <div class="service-tools">Node.js · Express · MongoDB</div>
                 </div>
-                <div class="service-card">
-                    <div class="service-emoji">🛒</div>
+                <div class="service-card" id="serviceShopify">
+                    <div class="service-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    </div>
                     <h3>Shopify Development</h3>
-                    <p>Custom Shopify stores with theme customization and optimization for better sales.</p>
+                    <p>Custom Shopify stores with theme customization and optimization engineered for conversions.</p>
+                    <div class="service-tools">Liquid · Shopify · Themes</div>
                 </div>
-                <div class="service-card">
-                    <div class="service-emoji">📝</div>
+                <div class="service-card" id="serviceWordpress">
+                    <div class="service-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                    </div>
                     <h3>WordPress Development</h3>
-                    <p>Easy-to-manage WordPress websites that are flexible and tailored to your business needs.</p>
+                    <p>Flexible, easy-to-manage WordPress websites tailored precisely to your business requirements.</p>
+                    <div class="service-tools">WordPress · PHP · Elementor</div>
                 </div>
-                <div class="service-card">
-                    <div class="service-emoji">🎨</div>
+                <div class="service-card" id="serviceDesign">
+                    <div class="service-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
                     <h3>Graphic Design</h3>
-                    <p>Logos, banners, social media graphics — everything to make your brand look awesome.</p>
+                    <p>Logos, banners, social media graphics — complete brand identity to make your business stand out.</p>
+                    <div class="service-tools">Figma · Photoshop · Canva</div>
                 </div>
             </div>
         </div>
@@ -122,62 +176,71 @@
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="section-container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="underline"></div>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>HTML</span>
-                        <span>95%</span>
+            <div class="section-header">
+                <span class="section-tag">My Toolkit</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with daily</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-level="95" id="skillHTML">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 95; stroke: #E34F26;"/>
+                        </svg>
+                        <span class="skill-percent">95%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95" style="background-color: #e34f26;"></div>
-                    </div>
+                    <h4 class="skill-name">HTML5</h4>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>CSS</span>
-                        <span>90%</span>
+                <div class="skill-card" data-level="90" id="skillCSS">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 90; stroke: #264DE4;"/>
+                        </svg>
+                        <span class="skill-percent">90%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90" style="background-color: #264de4;"></div>
-                    </div>
+                    <h4 class="skill-name">CSS3</h4>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>JavaScript</span>
-                        <span>85%</span>
+                <div class="skill-card" data-level="85" id="skillJS">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 85; stroke: #F7DF1E;"/>
+                        </svg>
+                        <span class="skill-percent">85%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85" style="background-color: #f7df1e;"></div>
-                    </div>
+                    <h4 class="skill-name">JavaScript</h4>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>React</span>
-                        <span>75%</span>
+                <div class="skill-card" data-level="75" id="skillReact">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 75; stroke: #61DAFB;"/>
+                        </svg>
+                        <span class="skill-percent">75%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75" style="background-color: #61dafb;"></div>
-                    </div>
+                    <h4 class="skill-name">React</h4>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>WordPress</span>
-                        <span>88%</span>
+                <div class="skill-card" data-level="88" id="skillWP">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 88; stroke: #21759B;"/>
+                        </svg>
+                        <span class="skill-percent">88%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="88" style="background-color: #21759b;"></div>
-                    </div>
+                    <h4 class="skill-name">WordPress</h4>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Shopify</span>
-                        <span>82%</span>
+                <div class="skill-card" data-level="82" id="skillShopify">
+                    <div class="skill-ring-wrap">
+                        <svg class="skill-ring" viewBox="0 0 120 120">
+                            <circle class="skill-ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="skill-ring-fill" cx="60" cy="60" r="52" style="--skill-percent: 82; stroke: #96BF48;"/>
+                        </svg>
+                        <span class="skill-percent">82%</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="82" style="background-color: #96bf48;"></div>
-                    </div>
+                    <h4 class="skill-name">Shopify</h4>
                 </div>
             </div>
         </div>
@@ -186,84 +249,107 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="section-container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="underline"></div>
+            <div class="section-header">
+                <span class="section-tag">Recent Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my latest builds</p>
+            </div>
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <span>🏋️</span>
+                <article class="project-card" id="projectGym">
+                    <div class="project-visual">
+                        <div class="project-overlay">
+                            <a href="https://mehrans12.github.io/musclesfitness/" target="_blank" rel="noopener noreferrer" class="project-view-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <span>View Live</span>
+                            </a>
+                        </div>
+                        <div class="project-icon-display">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11"/><path d="M6.5 17.5h11"/><path d="M3 12h18"/><rect x="5" y="4" width="3" height="16" rx="1"/><rect x="16" y="4" width="3" height="16" rx="1"/><rect x="2" y="9" width="4" height="6" rx="1"/><rect x="18" y="9" width="4" height="6" rx="1"/></svg>
+                        </div>
                     </div>
-                    <div class="project-details">
+                    <div class="project-info">
                         <h3>Muscles Fitness GYM</h3>
-                        <p>A modern gym website for showcasing training programs and memberships. Built to convert
-                            visitors into members!</p>
+                        <p>A modern gym website for showcasing training programs and memberships. Built to convert visitors into members.</p>
                         <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
                         </div>
-                        <a href="https://mehrans12.github.io/musclesfitness/" target="_blank" class="project-link">View
-                            Live ➜</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <span>🍔</span>
+                <article class="project-card" id="projectFood">
+                    <div class="project-visual">
+                        <div class="project-overlay">
+                            <a href="https://mehrans12.github.io/chohanfoodclub/" target="_blank" rel="noopener noreferrer" class="project-view-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <span>View Live</span>
+                            </a>
+                        </div>
+                        <div class="project-icon-display">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8c0-3-2-5-5-5S7 5 7 8"/><path d="M3 14h18"/><path d="M4 14c0 4 3.5 7 8 7s8-3 8-7"/><line x1="12" y1="3" x2="12" y2="2"/><path d="M9 2h6"/></svg>
+                        </div>
                     </div>
-                    <div class="project-details">
+                    <div class="project-info">
                         <h3>Chohan Food Club</h3>
-                        <p>A sleek café website with a bold red and black theme. Showcases the menu and brand with a
-                            premium feel.</p>
+                        <p>A sleek café website with a bold red and black theme. Showcases the menu and brand with a premium feel.</p>
                         <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JS</span>
-                            <span class="tech-badge">LocalStorage</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JS</span>
+                            <span class="tech-tag">LocalStorage</span>
                         </div>
-                        <a href="https://mehrans12.github.io/chohanfoodclub/" target="_blank" class="project-link">View
-                            Live ➜</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <span>🍽️</span>
+                <article class="project-card" id="projectRestaurant">
+                    <div class="project-visual">
+                        <div class="project-overlay">
+                            <a href="https://mehrans12.github.io/zaiqa-restaurant/" target="_blank" rel="noopener noreferrer" class="project-view-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <span>View Live</span>
+                            </a>
+                        </div>
+                        <div class="project-icon-display">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+                        </div>
                     </div>
-                    <div class="project-details">
+                    <div class="project-info">
                         <h3>Zaiqa Restaurant</h3>
-                        <p>A traditional restaurant site highlighting heritage and signature dishes. Reflects
-                            authenticity and trust.</p>
+                        <p>A traditional restaurant site highlighting heritage and signature dishes. Reflects authenticity and trust.</p>
                         <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JS</span>
-                            <span class="tech-badge">LocalStorage</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JS</span>
+                            <span class="tech-tag">LocalStorage</span>
                         </div>
-                        <a href="https://mehrans12.github.io/zaiqa-restaurant/" target="_blank"
-                            class="project-link">View Live ➜</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <span>📱</span>
-                    </div>
-                    <div class="project-details">
-                        <h3>Mobile Repair Website</h3>
-                        <p>Responsive mobile repair service website with interactive features for maximum conversions.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JS</span>
-                            <span class="tech-badge">LocalStorage</span>
+                <article class="project-card" id="projectMobile">
+                    <div class="project-visual">
+                        <div class="project-overlay">
+                            <a href="https://mehrans12.github.io/sajidmobilesolutions/" target="_blank" rel="noopener noreferrer" class="project-view-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <span>View Live</span>
+                            </a>
                         </div>
-                        <a href="https://mehrans12.github.io/sajidmobilesolutions/" target="_blank"
-                            class="project-link">View Live ➜</a>
+                        <div class="project-icon-display">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
                     </div>
-                </div>
+                    <div class="project-info">
+                        <h3>Mobile Repair Service</h3>
+                        <p>Responsive mobile repair service website with interactive features for maximum conversions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JS</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </div>
@@ -272,41 +358,62 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="underline"></div>
-            <p class="contact-intro">Want to work together? Feel free to reach out! 😄</p>
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+            </div>
             <div class="contact-wrapper">
                 <div class="contact-info-side">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
+                    <div class="contact-card" id="contactEmail">
+                        <div class="contact-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-card-text">
                             <strong>Email</strong>
                             <p>mehransoomro910@gmail.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
+                    <div class="contact-card" id="contactLocation">
+                        <div class="contact-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-card-text">
                             <strong>Location</strong>
                             <p>Remote / Worldwide</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🔗</span>
-                        <div>
+                    <div class="contact-card" id="contactProfiles">
+                        <div class="contact-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <div class="contact-card-text">
                             <strong>Profiles</strong>
                             <p>
-                                <a href="https://github.com/mehrans12" target="_blank">GitHub</a> |
-                                <a href="https://www.linkedin.com/in/mehrans12/" target="_blank">LinkedIn</a>
+                                <a href="https://github.com/mehrans12" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <span class="link-sep">·</span>
+                                <a href="https://www.linkedin.com/in/mehrans12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                             </p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
-                    <button type="submit" class="btn primary-btn submit-btn" id="submitBtn">Send Message 🚀</button>
+                    <div class="form-group">
+                        <input type="text" id="name" required autocomplete="name" placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required autocomplete="email" placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-submit" id="submitBtn">
+                        <span>Send Message</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -315,11 +422,35 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="section-container">
-            <p>Developed by Mehran Ahmed &copy; 2025</p>
-            <div class="footer-links">
-                <a href="https://github.com/mehrans12" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/mehrans12/" target="_blank">LinkedIn</a>
-                <a href="mailto:mehransoomro910@gmail.com">Email</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">M<span class="logo-dot">.</span></span>
+                    <p class="footer-tagline">Building digital experiences that matter.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/mehrans12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mehrans12/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:mehransoomro910@gmail.com" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Developed by <strong>Mehran Ahmed</strong> &copy; 2025</p>
             </div>
         </div>
     </footer>
